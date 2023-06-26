@@ -1,0 +1,251 @@
+<!-- Footer -->
+
+<footer
+
+    class="text-center text-lg-start bg-light text-muted mt-5">
+
+    <!-- Section: Social media -->
+
+    <section
+
+        class="d-flex justify-content-center  p-4 border-bottom">
+
+        <!-- Left -->
+
+        <div class="me-5 text-right d-none d-lg-block">
+
+            <span>Venez nous voir sur les réseaux sociaux:</span>
+
+        </div>
+
+        <!-- Left -->
+
+
+        <!-- Right -->
+
+        <div>
+
+            <a href="" class="me-4 text-reset">
+
+                <img src="{{asset('assets/img/icons-facebook.svg')}}" alt="social" height="17px">
+
+            </a>
+
+            <a href="" class="me-4 text-reset">
+
+                <img src="{{asset('assets/img/icons-twitter.png')}}" alt="social" height="17px">
+
+            </a>
+
+            <a href="" class="me-4 text-reset">
+
+                <img src="{{asset('assets/img/icons-linkedin.png')}}" alt="social" height="17px">
+
+            </a>
+
+        </div>
+
+        <!-- Right -->
+
+    </section>
+
+    <!-- Section: Social media -->
+
+
+    <!-- Section: Links  -->
+
+    <section class="">
+
+        <div
+
+            class="container text-center text-md-start mt-5">
+
+            <!-- Grid row -->
+
+            <div
+
+                class="row mt-3">
+
+                <!-- Grid column -->
+
+                <div
+
+                    class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+
+                    <!-- Content -->
+
+                    <h6 class="text-uppercase fw-bold mb-4">
+
+                        <i class="fas fa-gem me-3"></i>FAKE PARIS
+
+                    </h6>
+
+                    <p>
+
+                        Contrary to popular belief, Lorem Ipsum is not simply random text.It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
+
+                    </p>
+
+                </div>
+
+                <!-- Grid column -->
+
+
+                <!-- Grid column -->
+
+                <div
+
+                    class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+
+                    <!-- Links -->
+
+                    <h6 class="text-uppercase fw-bold mb-4">
+
+                        Nos articles
+
+                    </h6>
+
+                    <?php foreach($categories as $cat): ?>
+
+                    <p>
+
+                        <a href="#!" class="text-reset"><?=ucfirst($cat['categorie']) . 's' ?></a>
+
+                    </p>
+
+                    <?php endforeach ?>
+
+                </div>
+
+                <!-- Grid column -->
+
+
+                <!-- Grid column -->
+
+                <div
+
+                    class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+
+                    <!-- Links -->
+
+                    <h6 class="text-uppercase fw-bold mb-4">
+
+                        Liens utiles
+
+                    </h6>
+
+                    <p>
+
+                        <a href="#!" class="text-reset">CGV</a>
+
+                    </p>
+
+                    <p>
+
+                        <a href="#!" class="text-reset">Mentions légales</a>
+
+                    </p>
+
+                    <p>
+
+                        <a href="#!" class="text-reset">Politique de confidentalité</a>
+
+                    </p>
+
+                    <p>
+
+                        <a href="#!" class="text-reset">Qui sommes nous?</a>
+
+                    </p>
+
+                    <p>
+
+                        <a href="#!" class="text-reset">Trouver une boutique</a>
+
+                    </p>
+
+                </div>
+
+                <!-- Grid column -->
+
+
+                <!-- Grid column -->
+
+                <div
+
+                    class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+                    <!-- Links -->
+
+                    <h6 class="text-uppercase fw-bold mb-4">
+
+                        Contact
+
+                    </h6>
+
+
+                    <p>
+
+                        <img src="{{asset('assets/img/icons-home.svg')}}" alt="icon home" height="17px">
+
+                        Paris, 13ème, FRANCE
+
+                    </p>
+
+
+                    <p>
+
+                        <img src="{{asset('assets/img/icons-mail.png')}}" alt="icon mail" height="17px">
+
+                        info@example.com
+
+                    </p>
+
+                    <p>
+
+                        <img src="{{asset('assets/img/icons-phone.png')}}" alt="icon phone" height="17px">
+
+                        + 01 23 45 67 88
+
+                    </p>
+
+                    <p>
+
+                        <img src="{{asset('assets/img/icons-fax.png')}}" alt="icon mafaxil" height="17px">
+
+                        + 01 23 45 67 89</p>
+
+                </div>
+
+                <!-- Grid column -->
+
+            </div>
+
+            <!-- Grid row -->
+
+        </div>
+
+    </section>
+
+    <!-- Section: Links  -->
+
+
+    <!-- Copyright -->
+
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+
+        ©
+
+        <?=date('Y')?>
+
+        Copyright:
+
+        <a class="text-reset fw-bold" href="#">Fake-Paris.com</a>
+
+    </div>
+
+    <!-- Copyright -->
+
+</footer>
+
+<!-- Footer -->

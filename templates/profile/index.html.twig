@@ -1,0 +1,92 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ProfileController!
+{% endblock %}
+
+{% block body %}
+	<style>
+		.example-wrapper {
+			margin: 1em auto;
+			max-width: 800px;
+			width: 95%;
+			font: 18px / 1.5 sans-serif;
+		}
+		.example-wrapper code {
+			background: #F5F5F5;
+			padding: 2px 6px;
+		}
+	</style>
+
+{% if profile %} 
+<div class="container">
+    <div class="row">
+        <div class="col">
+            
+        </div>
+    </div>
+
+    {% include "./template-parts/general-notifs.html.twig" %}
+
+   <div class="container">
+    <div class="row">
+        <div class="col">
+            <h1>Votre profil</h1>
+        </div>
+    </div>
+
+    {% include "./template-parts/general-notifs.html.twig" %}
+
+    <div class="row justify-content-center">
+        <div class="col-6 ">
+            <table class="table shadow">
+                <tbody>
+                    <tr>
+                        <th scope="row">Photo :</th>
+                        <td><img src="{{ asset('/assets/img/profile/' ~ profile.photo) }}" alt="Photo" width="200px"></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Pseudo :</th>
+                        <td>{{ profile.pseudo }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Nom :</th>
+                        <td>{{ profile.nom }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Prénom :</th>
+                        <td>{{ profile.prenom }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Civilité :</th>
+                        <td>{{ profile.civilite }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Ville :</th>
+                        <td>{{ profile.ville }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Code Postal :</th>
+                        <td>{{ profile.codePostal }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Adresse :</th>
+                        <td>{{ profile.adresse }}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="text-center">
+                <a href="{{ path('app_update_user_profile') }}" class="btn btn-primary">Modifier</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+	<BR></BR>
+{% else %}
+<BR></BR>
+<a href="{{ path('app_create_user_profile') }}">CREE PROFIL</a>
+{% endif %}
+
+{% endblock %}

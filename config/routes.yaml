@@ -1,0 +1,121 @@
+controllers:
+    resource:
+        path: ../src/Controller/
+        namespace: App\Controller
+    type: attribute
+
+app_home:
+    path: /
+    controller: App\Controller\HomeController::index
+    methods: GET|POST
+
+
+#########################################################################
+#
+# Login / Logout
+#
+########################################################################
+
+app_login:
+    path: /login
+    controller: App\Controller\SecurityController::login
+    methods: GET|POST
+
+app_logout:
+    path: /logout
+    controller: App\Controller\SecurityController::logout
+    methods: GET
+
+app_register:
+    path: /register
+    controller: App\Controller\RegistrationController::register
+    methods: GET|POST
+
+app_verify_email:
+    path: /verify/email
+    controller: App\Controller\RegistrationController::verifyUserEmail
+    methods: GET|POST
+
+
+#########################################################################
+#
+# BackOffice ADMIN
+#
+########################################################################
+
+# Tableau de bord du back office admin:
+app_admin:
+    path: /admin
+    controller: App\Controller\Admin\AdminController::index
+    methods: GET
+
+#la page d'ajout de produit
+app_add_product:
+    path: /admin/add-product
+    controller: App\Controller\Admin\AdminController::addProduct
+    methods: GET|POST
+
+#La page de visualisation des produits
+app_read_products:
+    path: /admin/products
+    controller: App\Controller\Admin\AdminController::readProducts
+    methods: GET
+
+#la page de modification de produit
+app_update_product:
+    path: /admin/update-product/{id}
+    controller: App\Controller\Admin\AdminController::updateProduct
+    methods: GET|POST
+
+#la route de suppression d'un produit
+app_delete_product:
+    path: /admin/delete/product/{id}
+    controller: App\Controller\Admin\AdminController::deleteProduct
+    methods: GET
+
+#La page de visualisation des utilisateurs
+app_read_users:
+    path: /admin/users
+    controller: App\Controller\Admin\AdminController::readUsers
+    methods: GET
+
+#la page d'ajout d utilisateur
+app_add_user:
+    path: /admin/add-user
+    controller: App\Controller\Admin\AdminController::addUser
+    methods: GET|POST
+
+#la page de modification d'un utilisateur
+app_update_user:
+    path: /admin/update-user/{id}
+    controller: App\Controller\Admin\AdminController::updateUser
+    methods: GET|POST
+
+#la route de suppression d'un utilisateur
+app_delete_user:
+    path: /admin/delete/user/{id}
+    controller: App\Controller\Admin\AdminController::deleteUser
+    methods: GET
+
+#####################################################################
+#
+#      Route Espace membre utilisateur
+#
+#####################################################################
+
+# Page d'accueil de l'espace membre privé d'un utilisateur
+app_user_profile:
+    path: /membre
+    controller: App\Controller\ProfileController::index
+    methods: GET
+
+app_update_user_profile:
+    path: /membre/update-user
+    controller: App\Controller\ProfileController::updateProfile
+    methods: GET|POST   
+
+
+app_create_user_profile:
+    path: /membre/create-profile
+    controller: App\Controller\ProfileController::createProfile
+    methods: GET|POST    

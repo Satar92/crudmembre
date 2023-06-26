@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}CREE LE PROFIL{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h1 class="text-center">Modifier le profil</h1>
+    </div>
+
+    {% include "./template-parts/general-notifs.html.twig" %}
+
+    <div class="row">
+        <div class="col-sm-8 offset-sm-2">
+            <div class="d-flex flex-row">
+                <a href="{{ path('app_user_profile') }}" class="btn btn-outline-secondary"><strong>Retour à la liste</strong></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-8 offset-sm-2">
+        {{ form_start(form, {'attr': {'id': 'form_profile'}}) }}
+            <div class="form-error">
+                {{ form_errors(form) }}
+            </div>
+
+            <div class="row">
+                <div>
+                    {{ form_row(form.photo) }}
+                </div>
+            </div>
+        {{ form_end(form) }}
+    </div>
+{% endblock %}

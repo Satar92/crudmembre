@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6" style="background: red;">{% block leftCol %}{% endblock %}</div>
+            <div class="col-sm-6" style="background: blue;">{% block rightCol %}{% endblock %}</div>
+        </div>
+    </div>
+{% endblock %}

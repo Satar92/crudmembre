@@ -1,0 +1,33 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title %}Ajout nouveau Produit{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h1 class="text-center">Ajouter un produit</h1>
+    </div>
+
+    {% include "./template-parts/general-notifs.html.twig" %}
+
+    <div class="row">
+        <div class="col-sm-8 offset-sm-2">
+            <div class="d-flex flex-row">
+                <a href="{{ path('app_read_products') }}" class="btn btn-outline-secondary"><strong>Retour à la liste</strong></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-8 offset-sm-2">
+        {{ form_start(form, {'attr': {'id': 'form_produit'}}) }}
+            <div class="form-error">
+                {{ form_errors(form) }}
+            </div>
+
+            <div class="row">
+                <div>
+                    {{ form_row(form.photo) }}
+                </div>
+            </div>
+        {{ form_end(form) }}
+    </div>
+{% endblock %}

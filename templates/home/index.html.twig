@@ -1,0 +1,105 @@
+{% extends 'layout-full-width.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block contentFullWidth %}
+<div class="container">
+    <div class="row">
+        <div class="col h2">
+            <h2>NOS CATEGORIES</h2>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="d-flex flex-row justify-content-evenly flex-wrap">
+            {% for c in cat %}
+            <div class="card" style="width: 18rem;">
+                <img src="{{ asset(PRODUCT_CAT_IMG_FOLDER ~ c.nom ~ '.jpg')  }}" class="card-img-top" alt="categorie" height="215px">
+                <div class="card-body">
+                    <h5 class="card-title">{{ c.nom|ucfirst }}</h5>
+                    <p class="card-text"></p>
+                    <a href="#" class="btn btn-outline-secondary">Voir tous les articles</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        
+    </div> 
+</div>
+
+
+{% endblock %}
+
+{# {% extends 'layout-two-cols.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block leftCol %}
+1
+{% endblock %}
+
+{% block rightCol %}
+1
+{% endblock %} #}
+
+
+{# {% extends 'layout-left-col.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block leftCol %}
+1
+{% endblock %}
+
+{% block rightCol %}
+1
+{% endblock %} #}
+
+{# {% extends 'layout-right-col.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block leftCol %}
+1
+{% endblock %}
+
+{% block rightCol %}
+1
+{% endblock %} #}
+
+
+{# {% extends 'layout-three-cols.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block leftCol %}
+1
+{% endblock %}
+
+{% block centerCol %}
+1
+{% endblock %}
+
+{% block rightCol %}
+1
+{% endblock %} #}
+
+{# {% extends 'layout-four-cols.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block leftCol %}
+1
+{% endblock %}
+
+{% block centerLeftCol %}
+1
+{% endblock %}
+
+{% block centerRightCol %}
+1
+{% endblock %}
+
+{% block rightCol %}
+1
+{% endblock %} #}

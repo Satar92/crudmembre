@@ -1,0 +1,35 @@
+.notif {
+    width: 100%;
+}
+
+.flash-success {
+    padding: 10px;
+    width: 100%;
+    background: lightgreen;
+    border: 1px solid green;
+    color: forestgreen;
+}
+
+.flash-notice {
+    padding: 10px;
+    width: 100%;
+    background: rgb(45, 45, 129);
+    border: 1px solid rgb(45, 45, 129);
+    color: #fff;
+}
+
+.flash-warning {
+    padding: 10px;
+    width: 100%;
+    background: rgb(255, 207, 145);
+    border: 1px solid rgb(255, 207, 145);
+    color: rgb(255, 104, 4);
+}
+
+.flash-error {
+    padding: 10px;
+    width: 100%;
+    background: pink;
+    border: 1px solid red;
+    color: red;
+}

@@ -1,0 +1,11 @@
+h2 {
+    border-bottom: 1px solid #eee;
+}
+
+.cursor-default {
+    cursor: default;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}

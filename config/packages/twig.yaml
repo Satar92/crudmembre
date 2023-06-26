@@ -1,0 +1,12 @@
+twig:
+    default_path: '%kernel.project_dir%/templates'
+    file_name_pattern: ['*.twig']
+    form_themes: ['bootstrap_5_layout.html.twig']
+    globals:
+        maGlobaleTwig: 'Ma premiere globale twig custom'
+        PRODUCT_CAT_IMG_FOLDER: 'assets/img/products/categories/img/'
+        PRODUCT_IMG_FOLDER: 'assets/img/products/img/'
+
+when@test:
+    twig:
+        strict_variables: true
